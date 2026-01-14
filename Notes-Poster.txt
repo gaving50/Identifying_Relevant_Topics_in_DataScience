@@ -1,0 +1,99 @@
+The complete code of the scrapper portion:
+
+https://github.com/Zachery-Beck/Independent-Study.git
+
+
+Frequency: performance, figure, value, process, training, task, number, algorithm, time, network, method, result, user, using, set, image, system, learning, model, data
+
+TF3: accuracy, based, human, one, performance, figure, value, training, task, nuumber, algorithm, time, network, method, result, user, using, set, image, learning
+
+setFreq = {'performance', 'figure', 'value', 'process', 'training', 
+       'task', 'number', 'algorithm', 'time', 'network', 'method', 
+       'result', 'user', 'using', 'set', 'image', 'system', 
+       'learning', 'model', 'data'}
+
+setTF3 = {'accuracy', 'based', 'human', 'one', 
+          'performance', 'figure', 'value', 'training', 'task', 
+          'number', 'algorithm', 'time', 'network', 'method', 'result', 
+          'user', 'using', 'set', 'image', 'learning'}
+
+print(len(setFreq))
+
+print(len(setTF3))
+
+print(setTF3 - setFreq)
+{'one', 'human', 'accuracy', 'based'}
+
+print(setFreq - setTF3)
+{'system', 'process', 'data', 'model'}
+
+Gavin
+
+After receiving the table, we sorted all the words based on their word counts to get a general idea of what the tops words were in the 50 different files. After this, we obtained the union and intersection of these files to get the symmetrical difference of these sets. With the previous data we then created 4 main visualizations to illustrating what we have found.
+
+· Organizing the data
+· Getting the union and intersection of all the data
+· Establishing a set based on the symmetrical differences.
+· Creating visuals to compare the original set to the new set of data.
+
+Challenges:
+
+
+Findings/Conclusion.
+
+Overall, with this pilot there is evidence to support the fact that there are underlying keywords within data science academic papers not included within the key word section.
+
+Questions to be answered:
+
+Within the context of the paper, does the newfound keywords align with the paper itself?
+
+Are there trends to be found when it comes to key words and the subtopics of the paper?
+
+
+Zach:
+
+From an environment file, we are pulling the names for the folders that are used for the input of the PDFs for the output of the TXT files. Then, we download the files that contain the values used in stop words and lemmatization. We then convert the provided PDF files to TXT files as well as remove all non-alphabetical characters and apply lemmatization. We then read the folder we just wrote all those TXT files to and write them all into one long string then count the frequency in which the word shows up and apply that as a column in our table. We then generate the Term Frequency - Inverse Document Frequency for each document and apply all those values to our table along with generating the headers for each column. We then write this table to a file to allow us to give it another visual inspection in case of any unforeseen issues.
+
+Step 1
+
+· Generate TXT files from PDF files
+· Apply lemmatization
+· Remove all non-alphabetical characters
+
+Step 2
+
+· Calculate count of words in every file
+· Calculate Term Frequency - Inverse Document Frequency for each document
+· Generate headers for each file in the table
+· Add the words as rows and the count and the file titles as the columns
+
+ stop words removal as part of the algorithm!
+
+Step 3
+
+· Sort each column separately and generate new file for each sorted column
+
+
+Challanges
+
+· .
+
+· Issues with the look of the design and origination of the data frame.
+
+· When converting from PDF to TXT equations sometimes join onto the next word and creates issues where a word starts with a random letter.
+
+· Issues with words joining together because of how the pdf reader works.
+
+· Issues with the contents of the stop words not exactly matching what we need.
+
+· Issues with the names of files being long, unreadable, and give no context for the file contents.
+
+
+
+
+
+
+
+
+
+
